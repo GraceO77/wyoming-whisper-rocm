@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Wyoming-Whisper-ROCm</Name>
+  <Repository>ghcr.io/graceo77/wyoming-whisper-rocm:latest</Repository>
+  <Registry>https://github.com/GraceO77/wyoming-whisper-rocm/pkgs/container/wyoming-whisper-rocm</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GraceO77/wyoming-whisper-rocm/issues</Support>
+  <Project>https://github.com/GraceO77/wyoming-whisper-rocm</Project>
+  <Overview>Local Wyoming Faster Whisper speech-to-text server for Home Assistant using AMD ROCm acceleration via CTranslate2 ROCm.</Overview>
+  <Category>HomeAutomation: Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/GraceO77/wyoming-whisper-rocm/main/templates/Wyoming-Whisper-ROCm.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/home-assistant/assets/master/logo/logo.png</Icon>
+  <ExtraParams>--group-add=18</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>AMD ROCm-capable GPU with /dev/kfd and /dev/dri available on the Unraid host.</Requires>
+
+  <Config Name="Wyoming Port" Target="10300" Default="10300" Mode="tcp" Description="Wyoming protocol port used by Home Assistant." Type="Port" Display="always" Required="true" Mask="false">10300</Config>
+  <Config Name="Model Data" Target="/data" Default="/mnt/user/appdata/wyoming-faster-whisper-rocm/data" Mode="rw" Description="Persistent storage for downloaded Whisper models and cache." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/wyoming-faster-whisper-rocm/data</Config>
+  <Config Name="AMD KFD" Target="/dev/kfd" Default="/dev/kfd" Mode="" Description="AMD ROCm kernel fusion driver device." Type="Device" Display="always" Required="true" Mask="false">/dev/kfd</Config>
+  <Config Name="AMD DRI" Target="/dev/dri" Default="/dev/dri" Mode="" Description="AMD GPU DRM/render devices." Type="Device" Display="always" Required="true" Mask="false">/dev/dri</Config>
+</Container>
