@@ -9,11 +9,11 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/GraceO77/wyoming-whisper-rocm/issues</Support>
   <Project>https://github.com/GraceO77/wyoming-whisper-rocm</Project>
-  <Overview>Local Wyoming Faster Whisper speech-to-text server for Home Assistant using AMD ROCm acceleration via CTranslate2 ROCm.</Overview>
+  <Overview>Wyoming Faster Whisper speech-to-text server for Home Assistant using AMD ROCm acceleration via CTranslate2 ROCm. Current application version: 1.0.0.</Overview>
   <Category>HomeAutomation: Status:Stable</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/GraceO77/wyoming-whisper-rocm/main/templates/Wyoming-Whisper-ROCm.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/home-assistant/assets/master/logo/logo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/GraceO77/wyoming-whisper-rocm/main/assets/wyoming-whisper-rocm.png</Icon>
   <ExtraParams>--group-add=18</ExtraParams>
   <PostArgs/>
   <CPUset/>
