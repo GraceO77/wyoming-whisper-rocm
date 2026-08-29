@@ -46,14 +46,16 @@ jobs:
         with:
           context: .
           push: true
+          provenance: false
+          sbom: false
           build-args: |
             APP_VERSION=${{ steps.version.outputs.version }}
           tags: |
-            ghcr.io/${{ github.repository_owner }}/wyoming-whisper-rocm:latest
-            ghcr.io/${{ github.repository_owner }}/wyoming-whisper-rocm:${{ steps.version.outputs.version }}
-            ghcr.io/${{ github.repository_owner }}/wyoming-whisper-rocm:${{ steps.version.outputs.major_minor }}
-            ghcr.io/${{ github.repository_owner }}/wyoming-whisper-rocm:${{ steps.version.outputs.major }}
-            ghcr.io/${{ github.repository_owner }}/wyoming-whisper-rocm:sha-${{ github.sha }}
+            ghcr.io/graceo77/wyoming-whisper-rocm:latest
+            ghcr.io/graceo77/wyoming-whisper-rocm:${{ steps.version.outputs.version }}
+            ghcr.io/graceo77/wyoming-whisper-rocm:${{ steps.version.outputs.major_minor }}
+            ghcr.io/graceo77/wyoming-whisper-rocm:${{ steps.version.outputs.major }}
+            ghcr.io/graceo77/wyoming-whisper-rocm:sha-${{ github.sha }}
           labels: |
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
             org.opencontainers.image.version=${{ steps.version.outputs.version }}
