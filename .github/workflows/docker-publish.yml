@@ -45,9 +45,9 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          push: true
           provenance: false
           sbom: false
+          outputs: type=image,push=true,oci-mediatypes=false
           build-args: |
             APP_VERSION=${{ steps.version.outputs.version }}
           tags: |
